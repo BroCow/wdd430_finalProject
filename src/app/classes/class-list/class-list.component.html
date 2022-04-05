@@ -1,0 +1,37 @@
+<p>class-list works!</p>
+
+
+<div class="panel panel-default">
+
+    <div class="panel-heading">
+
+      <div class="row pad-left-right">
+        <span class="pull-left title">Classes</span>
+        <!-- locate the <a> (anchor) tag for the Add Classes button. Add a [routerLink] directive to the anchor tag and assign the URL path defined in the mapping table (for example, "new") to load the ClassEditComponent for a new class -->
+        <a [routerLink]="['new']" class="btn btn-success pull-right">Add Class</a>
+      </div>
+
+    </div>
+
+    <div class="panel-body">
+
+      <div class="center-panel">
+        <fp-class-item
+        *ngFor="let classItem of classes"
+        [class]="classItem"></fp-class-item>
+
+
+
+        <!-- <cms-document-item
+        *ngFor="let documentItem of documents"
+        [document]="documentItem"
+        ></cms-document-item>  -->
+      </div>
+
+    </div>
+  
+  </div>
+
+
+
+
